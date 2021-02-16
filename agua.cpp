@@ -144,7 +144,7 @@ class functions
             return ret;
         }
  
-        // calculo da interpolacao linear
+        // calculation of linear interpolation
         int functions::X_Y( double  xd, double &yd, double x[], double y[], int n)
         {
             int i=0;
