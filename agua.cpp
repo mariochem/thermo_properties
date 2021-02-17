@@ -388,19 +388,19 @@ int main()
     double xd, temp, yd = 0.0;
     int resp;
     
-    saturated agua;
+    saturated water;
     
     for (xd = 5; xd<375; xd=xd+5)
     {
         // direct properties
         show(xd , 0, "C");
-        show(yd ,agua.pv(xd,yd) ,"Pv");
-        show(yd ,agua.vl(xd,yd) ,"Vl");
-        show(yd ,agua.vv(xd,yd) ,"Vv");
-        show(yd ,agua.hl(xd,yd) ,"Hl");
-        show(yd ,agua.hv(xd,yd) ,"Hv");
-        show(yd ,agua.sl(xd,yd) ,"Sl");
-        show(yd ,agua.sv(xd,yd) ,"Sv");
+        show(yd ,water.pv(xd,yd) ,"Pv");
+        show(yd ,water.vl(xd,yd) ,"Vl");
+        show(yd ,water.vv(xd,yd) ,"Vv");
+        show(yd ,water.hl(xd,yd) ,"Hl");
+        show(yd ,water.hv(xd,yd) ,"Hv");
+        show(yd ,water.sl(xd,yd) ,"Sl");
+        show(yd ,water.sv(xd,yd) ,"Sv");
         cout<< endl;
     }
     cout<<endl;
@@ -409,13 +409,13 @@ int main()
     {
        // derived properties
        show(xd , 0, "C");
-       show(yd, agua.hevap( xd , yd),"HEvap");
-       show(yd, agua.sevap( xd , yd),"SEvap");
-       show(yd, agua.uv( xd , yd),"Uv");
-       show(yd, agua.ul( xd , yd),"Ul");
-       show(yd, agua.uevap( xd , yd),"UEvap");
+       show(yd, water.hevap( xd , yd),"HEvap");
+       show(yd, water.sevap( xd , yd),"SEvap");
+       show(yd, water.uv( xd , yd),"Uv");
+       show(yd, water.ul( xd , yd),"Ul");
+       show(yd, water.uevap( xd , yd),"UEvap");
        // Evaporation entropy is a derived property given by Evap / T_Evap
-       //agua.H_Evap( xd , yd, agua.temp, agua.hvap, agua.hliq, SIZE);
+       //water.H_Evap( xd , yd, water.temp, water.hvap, water.hliq, SIZE);
        //cout << yd/(xd+273.15);
        //
        cout<<endl;
