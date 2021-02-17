@@ -380,6 +380,9 @@ class saturated: public functions
 
 
 void show ( double yd, int resp, string titulo);    
+void showcab1 ();
+void showcab2 ();
+
 
 int main()
 {
@@ -390,30 +393,33 @@ int main()
     
     saturated water;
     
+    showcab1();
     for (xd = 5; xd<375; xd=xd+5)
+    
     {
         // direct properties
-        show(xd , 0, "C");
-        show(yd ,water.pv(xd,yd) ,"Pv");
-        show(yd ,water.vl(xd,yd) ,"Vl");
-        show(yd ,water.vv(xd,yd) ,"Vv");
-        show(yd ,water.hl(xd,yd) ,"Hl");
-        show(yd ,water.hv(xd,yd) ,"Hv");
-        show(yd ,water.sl(xd,yd) ,"Sl");
-        show(yd ,water.sv(xd,yd) ,"Sv");
+        show(xd , 0, "");
+        show(yd ,water.pv(xd,yd) ,"");
+        show(yd ,water.vl(xd,yd) ,"");
+        show(yd ,water.vv(xd,yd) ,"");
+        show(yd ,water.hl(xd,yd) ,"");
+        show(yd ,water.hv(xd,yd) ,"");
+        show(yd ,water.sl(xd,yd) ,"");
+        show(yd ,water.sv(xd,yd) ,"");
         cout<< endl;
     }
     cout<<endl;
 
+    showcab2();
     for (xd = 5; xd<375; xd=xd+5)
     {
        // derived properties
-       show(xd , 0, "C");
-       show(yd, water.hevap( xd , yd),"HEvap");
-       show(yd, water.sevap( xd , yd),"SEvap");
-       show(yd, water.uv( xd , yd),"Uv");
-       show(yd, water.ul( xd , yd),"Ul");
-       show(yd, water.uevap( xd , yd),"UEvap");
+       show(xd , 0, "");
+       show(yd, water.hevap( xd , yd),"");
+       show(yd, water.sevap( xd , yd),"");
+       show(yd, water.uv( xd , yd),"");
+       show(yd, water.ul( xd , yd),"");
+       show(yd, water.uevap( xd , yd),"");
        // Evaporation entropy is a derived property given by Evap / T_Evap
        //water.H_Evap( xd , yd, water.temp, water.hvap, water.hliq, SIZE);
        //cout << yd/(xd+273.15);
@@ -436,4 +442,24 @@ void show ( double yd, int resp, string title)
         cout << "The unknown value is out the range."<<endl;
     }
             
+}
+
+void showcab2 ()
+{
+    cout << setw(8) << "Temp" << setw(14)<< "HEvap"<< setw(15)<<"SEvap"
+    <<setw(9)<<"Uv"<<setw(14)<<"Ul" <<setw(13) <<"UEvap" ;
+    cout<<endl; 
+    cout << setw(8) << "\u2103" << setw(16)<< "kJ/kg"<< setw(14)<<"kJ/kg"<<"\u2103"
+    <<setw(11)<<"kJ/kg"<<setw(14)<<"kJ/kg" <<setw(11) <<"kJ/kg" ;
+    cout<<endl;           
+}
+
+void showcab1 ()
+{
+    cout << setw(8) << "Temp" << setw(15)<< "Pvap"<< setw(13)<<"Vliq"
+    <<setw(12)<<"Vvap"<<setw(14)<<"Hliq" <<setw(11) << "Hvap" << setw(14)<< "Sliq"<<setw(13) <<"Svap"
+    << endl;
+    cout << setw(8) << "\u2103" << setw(16)<<"kpa"<<setw(15)<<"m3/kg"<<setw(12)<<"m3/kg"<<setw(14)<< 
+    "kJ/kg"<< setw(14)<<setw(11)<<"kJ/kg"<<setw(14)<<"kJ/kg"<<"\u2103"<<setw(12) <<"kJ/kg"<<"\u2103" ;
+    cout<<endl;       
 }
