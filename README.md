@@ -4,8 +4,8 @@ This repository contains programs to assist in projects involving calculations o
 
 The agua.cpp program calculates the properties of saturated water vapor given the temperature. The properties that are calculated in the present version are as follows:
 
-  1 - Steam Pressure in kpa at a given temperature in celsius.
-  2 - Specific volume of the saturated liquid in m3 / kg at a given temperature in celsius.
+  <p>1 - Steam Pressure in kpa at a given temperature in celsius.<p>
+  <p>2 - Specific volume of the saturated liquid in m3 / kg at a given temperature in celsius.<p>
   3 - Specific volume of saturated steam in m3 / kg at a given temperature in celsius.
   4 - Enthalpy of the saturated liquid in kJ / kg at a given temperature in celsius.
   5 - Enthalpy of saturated steam in kJ / kg at a given temperature in celsius.
