@@ -17,11 +17,11 @@ The agua.cpp program calculates the properties of saturated water vapor given th
 11 - Internal energy liquid water in kJ / kg at a given temperature in celsius.
 12 - Internal energy of water evaporation in kJ / kg at a given temperature in celsius.
 
-To perform the calculation of properties in the saturation state that are within the temperature range between 0 to 374.14 ºC, use the following procedures:
+To perform the calculation of properties in the saturation state that are within the temperature range between **0** to **374.14 ºC**, use the following procedures:
 
-1 - instantiate an object to have access to all the calculation functions present for water, in this case the water object was instantiated.
+<p>1 - instantiate an object to have access to all the calculation functions present for water, in this case the water object was instantiated.
 
-2 - From there you can use the following direct functions:
+<p>2 - From there you can use the following direct functions:
       a - water.pv (xd, yd) this function calculates the vapor pressure at a given temperature in celcius that must be entered in xd.
 The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd reports the value obtained for the steam pressure in kpa.
 
