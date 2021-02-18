@@ -52,10 +52,10 @@ The function returns an integer 0 or 1 to inform whether the temperature is with
 The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd reports the value obtained for the entropy in water evaporation in kJ / kg * K.
 
       c - water.uv (xd, yd) This function calculates the free energy of water vapor in the saturation condition. The temperature in celsius must be entered in xd.
-The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd reports the value obtained for the free energy of water vapor in kJ / kg.
+The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd reports the value obtained for the free energy of water vapor in **kJ/kg**.
 
       d - water.ul (xd, yd) This function calculates the free energy of liquid water in the saturation condition. The temperature in celsius must be entered in xd.
-The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd informs the value obtained for the free energy of liquid water in kJ / kg * K.
+The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd informs the value obtained for the free energy of liquid water in **kJ/kg*K**.
 
-      e - **water.uevap (xd, yd)** this function calculates the free energy in the evaporation of water in the saturation condition. The temperature in celsius must be entered in xd.
+      e - water.uevap (xd, yd) this function calculates the free energy in the evaporation of water in the saturation condition. The temperature in celsius must be entered in xd.
 The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd reports the value obtained for free energy in water evaporation in kJ / kg.
