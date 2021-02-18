@@ -26,7 +26,7 @@ To perform the calculation of properties in the saturation state that are within
 The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd reports the value obtained for the steam pressure in kpa.
 
       b - water.vl (xd, yd) this function calculates the specific volume of liquid water in the saturation condition. The temperature in celsius must be entered in xd.
-The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd informs the value obtained for the specific volume in m3 / kg.
+The function returns an integer 0 or 1 to inform whether the temperature is within or out of the range for the interval of saturation. The variable yd informs the value obtained for the specific volume in m3 / kg. 
 
       c - water.vv (xd, yd) this function calculates the specific volume of water vapor in the saturation condition. The temperature in celsius must be entered in xd.
 The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd informs the value obtained for the specific volume in m3 / kg.
@@ -57,5 +57,5 @@ The function returns an integer 0 or 1 to inform whether the temperature is with
       d - water.ul (xd, yd) This function calculates the free energy of liquid water in the saturation condition. The temperature in celsius must be entered in xd.
 The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd informs the value obtained for the free energy of liquid water in kJ / kg * K.
 
-      e - water.uevap (xd, yd) this function calculates the free energy in the evaporation of water in the saturation condition. The temperature in celsius must be entered in xd.
+      e - **water.uevap (xd, yd)** this function calculates the free energy in the evaporation of water in the saturation condition. The temperature in celsius must be entered in xd.
 The function returns an integer 0 or 1 to inform whether the temperature is within the range of the table. The variable yd reports the value obtained for free energy in water evaporation in kJ / kg.
