@@ -379,7 +379,7 @@ class saturated: public functions
 
 
 
-void show ( double yd, int resp, string titulo);    
+void show ( double yd, int resp, string titulo,int width);    
 void showcab1 ();
 void showcab2 ();
 
@@ -398,44 +398,37 @@ int main()
     
     {
         // direct properties
-        show(xd , 0, "");
-        show(yd ,water.pv(xd,yd) ,"");
-        show(yd ,water.vl(xd,yd) ,"");
-        show(yd ,water.vv(xd,yd) ,"");
-        show(yd ,water.hl(xd,yd) ,"");
-        show(yd ,water.hv(xd,yd) ,"");
-        show(yd ,water.sl(xd,yd) ,"");
-        show(yd ,water.sv(xd,yd) ,"");
-        cout<< endl;
+        show(xd , 0, "|",10);
+        show(yd ,water.pv(xd,yd) ,"|",12);
+        show(yd ,water.vl(xd,yd) ,"|",9);
+        show(yd ,water.vv(xd,yd) ,"|",10);
+        show(yd ,water.hl(xd,yd) ,"|",11);
+        show(yd ,water.hv(xd,yd) ,"|",10);
+        show(yd ,water.sl(xd,yd) ,"|",8);
+        show(yd ,water.sv(xd,yd) ,"|",8);
+        show(yd, water.hevap( xd , yd),"|",12);
+        show(yd, water.sevap( xd , yd),"|",9);
+        show(yd, water.uv( xd , yd),"|",10);
+        show(yd, water.ul( xd , yd),"|",12);
+        show(yd, water.uevap( xd , yd),"|",11);
+
+        cout<< "|" << endl;
     }
     cout<<endl;
 
-    showcab2();
-    for (xd = 5; xd<375; xd=xd+5)
-    {
-       // derived properties
-       show(xd , 0, "");
-       show(yd, water.hevap( xd , yd),"");
-       show(yd, water.sevap( xd , yd),"");
-       show(yd, water.uv( xd , yd),"");
-       show(yd, water.ul( xd , yd),"");
-       show(yd, water.uevap( xd , yd),"");
        // Evaporation entropy is a derived property given by Evap / T_Evap
        //water.H_Evap( xd , yd, water.temp, water.hvap, water.hliq, SIZE);
        //cout << yd/(xd+273.15);
        //
-       cout<<endl;
-    }
-    cout<<endl;
-
+    
 return 0;
 }
 
-void show ( double yd, int resp, string title)
+void show ( double yd, int resp, string title,int width)
 {
     if (resp ==0)
     {
-        cout << title + " " <<setw(11)<< yd << " "; //set the width = 11
+        cout << title<<setw(width)<< yd << " "; //set the width = 11
     }
     else
     {
@@ -444,22 +437,15 @@ void show ( double yd, int resp, string title)
             
 }
 
-void showcab2 ()
-{
-    cout << setw(8) << "Temp" << setw(14)<< "HEvap"<< setw(15)<<"SEvap"
-    <<setw(9)<<"Uv"<<setw(14)<<"Ul" <<setw(13) <<"UEvap" ;
-    cout<<endl; 
-    cout << setw(8) << "\u2103" << setw(16)<< "kJ/kg"<< setw(14)<<"kJ/kg"<<"\u2103"
-    <<setw(11)<<"kJ/kg"<<setw(14)<<"kJ/kg" <<setw(11) <<"kJ/kg" ;
-    cout<<endl;           
-}
-
 void showcab1 ()
 {
-    cout << setw(8) << "Temp" << setw(15)<< "Pvap"<< setw(13)<<"Vliq"
-    <<setw(12)<<"Vvap"<<setw(14)<<"Hliq" <<setw(11) << "Hvap" << setw(14)<< "Sliq"<<setw(13) <<"Svap"
+    cout << setw(8) << "Temp" << setw(15)<< "Pvap"<< setw(10)<<"Vliq"
+    <<setw(11)<<"Vvap"<<setw(14)<<"Hliq" <<setw(11) << "Hvap" << setw(12)<< "Sliq"<<setw(10) <<
+    "Svap"<<setw(14)<< "HEvap"<< setw(13)<<"SEvap"<<setw(9)<<"Uv"<<setw(15)<<"Ul" <<setw(14) <<"UEvap"
     << endl;
-    cout << setw(8) << "\u2103" << setw(16)<<"kpa"<<setw(15)<<"m3/kg"<<setw(12)<<"m3/kg"<<setw(14)<< 
-    "kJ/kg"<< setw(14)<<setw(11)<<"kJ/kg"<<setw(14)<<"kJ/kg"<<"\u2103"<<setw(12) <<"kJ/kg"<<"\u2103" ;
+    cout << setw(8) << "\u2103" << setw(16)<<"kpa"<<setw(12)<<"m3/kg"<<setw(11)<<"m3/kg"<<setw(14)<< 
+    "kJ/kg"<< setw(14)<<setw(11)<<"kJ/kg"<<setw(12)<<"kJ/kg"<<"\u2103"<<setw(9) <<"kJ/kg"<<"\u2103"
+    << setw(12)<< "kJ/kg"<< setw(13)<<"kJ/kg"<<"\u2103"
+    <<setw(11)<<"kJ/kg"<<setw(15)<<"kJ/kg" <<setw(11) <<"kJ/kg" ;
     cout<<endl;       
 }
