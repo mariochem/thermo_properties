@@ -23,8 +23,8 @@ To perform the calculation of properties in the saturation state that are within
 
 2 - From there you can use the following direct functions:<p>
   
-      a - water.pv (xd, yd) this function calculates the vapor pressure at a given temperature in celcius that must be entered in xd.
-The function returns an integer 0 or 1 to inform whether the pressure is within the range of the table. The variable yd reports the value obtained for the steam pressure in **kpa**.
+      a - water.tvp (xd, yd) this function calculates the temperature of saturated vapor and liquid at a given pressure in kpa that must be entered in xd.
+The function returns an integer 0 or 1 to inform whether the pressure is within the range of the table. The variable yd contains the value obtained from the calculation for steam temperature in **ºC**.
 
       b - water.vlp (xd, yd) this function calculates the specific volume of liquid water in the saturation condition. The temperature in celsius must be entered in xd.
 The function returns an integer 0 or 1 to inform whether the pressure is within or out of the range for the interval of saturation. The variable yd informs the value obtained for the specific volume in **m3/kg**. 
