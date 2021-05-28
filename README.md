@@ -1,6 +1,6 @@
 # thermo_properties
 
-This repository contains programs to assist in projects involving calculations of chemical processes and calculations of energy production.
+This repository contains programs written in C++ to assist people working in projects involving calculations of steam thermodynamics properties for chemical processes and energy production.
 
 The agua.cpp program calculates the properties of saturated water vapor given the temperature. The properties that are calculated in the present version are as follows:<P>
 
