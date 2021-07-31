@@ -1,4 +1,4 @@
-time	valueA	valueB valueC
+time,	valueA,	valueB, valueC
 5,	  87.21,  1000, 147.12	
 10,	122.76, 1000,	106.38
 15,	170.51, 1001,	77.93	
